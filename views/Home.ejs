@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>this is home page</h1>
+    <table border="1">
+        <a href="/add"  style="background-color: green; text-decoration: none; color:black;border:1px  solid black; ">add record</a>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Course</th>
+        <td>Action</td>
+        <td>FILE</td>
+      </tr>
+      <%dt.forEach(row=>{
+        %>
+       <tr>
+        <td><%=row.id%> </td>
+        <td><%=row.name%> </td>
+        <td><%=row.course%></td>
+        <td>
+            <a href="/edit"  style="background-color: yellow; text-decoration: none; color:black;border:1px  solid black; ">Edit</a>
+            <a href="/delete"  style="background-color:red; text-decoration: none; color:black;border:1px  solid black; ">Delete</a>
+            </td>
+        </tr>
+        <% })%>
+    </table>
+</body>
+</html>
